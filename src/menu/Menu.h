@@ -11,6 +11,10 @@ class Menu {
 public:
     Menu(std::string title) : _title(std::move(title)){}
 
+    void addCommand(const MenuCommand &command){
+        _commands.push_back(command);
+    }
+
     void showOptions(std::ostream &out)const;
 
     void runCommands(std::ostream &out)const;
